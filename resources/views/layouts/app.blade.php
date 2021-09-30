@@ -55,8 +55,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{ route('users.index') }}" class="dropdown-item">
+                                    <a href="{{ route('admin.users.index') }}" class="dropdown-item">
                                         Management User
+                                    </a>
+
+                                    <a href="{{ route('admin.users2.index') }}" class="dropdown-item">
+                                        Management User 2
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

@@ -3,16 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\User2;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class User2Controller extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -20,17 +15,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('admin.users.index')->with('users',$users);
+        return "This is User 2";
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\User2  $user2
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User2 $user2)
     {
         //
     }
@@ -39,10 +33,10 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\User2  $user2
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, User2 $user2)
     {
         //
     }
@@ -50,10 +44,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\User2  $user2
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(User2 $user2)
     {
         //
     }
