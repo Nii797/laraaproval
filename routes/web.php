@@ -2,6 +2,7 @@
 
 use App\Comment;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,8 @@ Route::get('/dash', function() {
     $comments = Comment::orderBy('created_at','desc')->get();
     return view('dashboard')->with('comments',$comments);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/admin/users', 'Admin\UserController', ['expect' => ['show', 'create', 'store']]);
