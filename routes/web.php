@@ -43,5 +43,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Grouping
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UserController', ['expect' => ['show', 'create', 'store']]);
-    Route::resource('/users2', 'User2Controller', ['except' => ['show', 'create', 'store']]);
 });

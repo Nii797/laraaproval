@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     @foreach ($users as $user)
-                        {{ $user->name }} - {{ $user->email }} - {{ $user->password }}
+                        {{ $user->name }} - {{ $user->email }}
                     @endforeach
                 </div>
             </div>
